@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Prediction</title>
+</head>
+<body>
+    <h1>Skin Disease Prediction</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Image</button>
+    </form>
+
+    {% if result %}
+        <h2>Predicted Disease: {{ result }}</h2>
+    {% endif %}
+
+    {% if image_url %}
+        <h3>Uploaded Image:</h3>
+        <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 300px; border: 1px solid #ccc; padding: 5px;">
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Bỏ qua thư mục data/
+data/
+
+# Bỏ qua các file Python cache
+__pycache__/
+*.py[cod]
+
+# Bỏ qua các file môi trường ảo
+env/
+venv/
+
+# Bỏ qua file database sqlite nếu có
+*.sqlite3
+
+# Bỏ qua file media nếu không muốn đẩy lên git
+media/
+
+# Bỏ qua file cấu hình IDE
+.vscode/
+.idea/
